@@ -6,16 +6,6 @@ function App() {
 
     const [board, setBoard] = useState(new Board())
 
-    useEffect(() => {
-        restart()
-    }, [])
-
-    function restart() {
-        const newBoard = new Board();
-        newBoard.initCells()
-        setBoard(newBoard)
-    }
-
   return (
     <div className="app">
       <BoardComponent board={board} setBoard={setBoard} />
