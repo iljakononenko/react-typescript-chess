@@ -41,12 +41,12 @@ const Timer:FC<TimerProps> = ({currentPlayer, restart}) => {
     }
 
     return (
-        <div>
-            <div>
-                <button onClick={handleRestart}>Restart game</button>
-            </div>
+        <div style={{marginRight: 10}}>
             <h2>Black - {blackTime}</h2>
             <h2>White - {whiteTime}</h2>
+            <div style={{marginTop: 10}}>
+                <button className={'restart_button'} onClick={handleRestart}>Restart game</button>
+            </div>
         </div>
     );
 };

@@ -9,12 +9,14 @@ interface LostFiguresProps {
 const LostFigures:FC<LostFiguresProps> = ({title, figures}) => {
     return (
         <div className={'lost'}>
-            <h3>{title}</h3>
-            {figures.map(figure =>
-                <div style={{display: 'flex', padding: "10px 0"}} key={figure.id}>
-                    {figure.name} {figure.logo && <img width={20} height={20} src={figure.logo} alt=""/>}
-                </div>
-            )}
+            <h3 style={{marginBottom: 6}}>{title}</h3>
+            <div style={{display: "flex"}}>
+                {figures.map(figure =>
+                    <div style={{display: 'flex'}} key={figure.id}>
+                        {figure.logo && <img width={24} height={24} src={figure.logo} alt=""/>}
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
